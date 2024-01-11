@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Documentation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header><h1>React Documentation</h1></header>
+      <ul>
+        <li><a href="#introduction" class="nav-link">Introduction</a></li>
+        <li><a href="#key_term" class="nav-link">Key Term</a></li>
+        <li><a href="#installation" class="nav-link">Installation</a></li>
+        <li>
+          <a href="#hello_world_example" class="nav-link"
+            >Hello World Example</a
+          >
+        </li>
+        <li><a href="#components" class="nav-link">Components</a></li>
+        <li><a href="#props" class="nav-link">Props</a></li>
+        <li><a href="#state" class="nav-link">State</a></li>
+        <li>
+          <a href="#lifecycle_methods" class="nav-link">Lifecycle Methods</a>
+        </li>
+        <li>
+          <a href="#conditional_rendering" class="nav-link"
+            >Conditional Rendering</a
+          >
+        </li>
+        <li><a href="#lists_and_keys" class="nav-link">Lists and Keys</a></li>
+        <li><a href="#event_handling" class="nav-link">Event Handling</a></li>
+        <li><a href="#forms" class="nav-link">Forms</a></li>
+        <li>
+          <a href="#conditional_rendering_2" class="nav-link"
+            >Conditional Rendering 2</a
+          >
+        </li>
+        <li><a href="#styling" class="nav-link">Styling</a></li>
+        <li><a href="#router" class="nav-link">Router</a></li>
+        <li><a href="#hooks" class="nav-link">Hooks</a></li>
+        <li><a href="#context" class="nav-link">Context</a></li>
+        <li><a href="#redux" class="nav-link">Redux</a></li>
+        <li><a href="#testing" class="nav-link">Testing</a></li>
+        <li><a href="#deployment" class="nav-link">Deployment</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="introduction">
+        <header><h2>Introduction</h2></header>
+        <p>
+          React is a popular JavaScript library for building user interfaces.
+          Developed and maintained by Facebook, it allows you to create
+          interactive, reusable, and modular UI components. React is known for
+          its performance, flexibility, and the use of a virtual DOM, which
+          optimizes updates and rendering.
+        </p>
+      </section>
+      <section class="main-section" id="key_term">
+        <header><h2>Key Term</h2></header>
+        <ol>
+          <li>
+            <strong>Component:</strong> A core building block in React.
+            Components are reusable, self-contained pieces of the user interface
+            that can be created and composed to build complex applications.
+          </li>
+          <li>
+            <strong>Virtual DOM:</strong> A lightweight representation of the
+            actual DOM (Document Object Model). React uses the virtual DOM to
+            improve rendering performance by minimizing the number of updates to
+            the actual DOM.
+          </li>
+          <li>
+            <strong>Props:</strong> Short for "properties," props are inputs
+            passed to a component. They are used to configure and customize a
+            component's behavior and appearance.
+          </li>
+          <li>
+            <strong>State:</strong> State is a way to manage and store data
+            within a component. It allows a component to maintain and track
+            changes in its data and re-render as needed.
+          </li>
+          <li>
+            <strong>JSX (JavaScript XML):</strong> A syntax extension for
+            JavaScript that allows you to write HTML-like code within your
+            JavaScript. JSX is used to define the structure and appearance of
+            React components.
+          </li>
+          <li>
+            <strong>npm:</strong> npm is a package manager for JavaScript that
+            comes bundled with Node.js. It is used to manage and install
+            packages, including React.
+          </li>
+          <li>
+            <strong>yarn:</strong> An alternative package manager to npm,
+            specifically designed for speed and reliability when installing
+            packages.
+          </li>
+          <li>
+            <strong>Import:</strong> The import statement is used to include
+            external modules or libraries (in this case, the React library) in
+            your JavaScript file.
+          </li>
+          <li>
+            <strong>Render:</strong> The render method in a component is
+            responsible for returning the JSX that defines the component's
+            structure and appearance.
+          </li>
+          <li>
+            <strong>Prop Types:</strong> Prop types are used for type checking
+            the props a component receives to ensure that they conform to the
+            expected data types.
+          </li>
+          <li>
+            <strong>setState:</strong> The `setState` method is used to update
+            the state of a component. It schedules a re-render with the uppdated
+            state.
+          </li>
+          <li>
+            <strong>componentDidMount:</strong> A lifestyle method called after
+            a component is mounted to the DOM. It's commonly used for data
+            fetching and setup.
+          </li>
+          <li>
+            <strong>componentDidUpdate:</strong> A lifestyle method called after
+            a component's state or props change. Itt's used for responding to
+            changes.
+          </li>
+          <li>
+            <strong>componentWillUnmount:</strong> A lifecycle method called
+            before a component is removed from the DOM. It's used for cleanup
+            and resource disposal.
+          </li>
+          <li>
+            <strong>Key:</strong> A "key" is a special string attribute that
+            needs to be added to elements inside an array to give the elements a
+            stable identity. Keys help React identify which items have changed,
+            been added, or removed.
+          </li>
+          <li>
+            <strong>Event Handler:</strong> An event handler is a function that
+            is called when a specific event occurs, such as a click event, and
+            is used to respond to user interactions.
+          </li>
+          <li>
+            <strong>Style-components:</strong> A popular CSS-in-JS library for
+            styling React components by writing actual CSS code within
+            JavaScript.
+          </li>
+          <li>
+            <strong>React Router:</strong> A popular library for handling
+            routing and navigation in React applications.
+          </li>
+          <li>
+            <strong>useState:</strong> A hook used to add state to functional
+            components.
+          </li>
+          <li>
+            <strong>useEffect:</strong> A hook used to perform sode effects in
+            functional components.
+          </li>
+          <li>
+            <strong>useContext:</strong> A hook used for consuming context in
+            functional components.
+          </li>
+          <li>
+            <strong>Redux:</strong> A state management library for JavaScript
+            applications, often use with React.
+          </li>
+          <li>
+            <strong>Jest:</strong> A popular JavaScript testing framework often
+            used for testing React applications.
+          </li>
+          <li>
+            <strong>Enzyme:</strong> A JavaScript testing utility for React that
+            makes it easier to assert, manipulate, and traverse React
+            components' output.
+          </li>
+          <li>
+            <strong>Deployment:</strong> The process of making a React
+            application available on the internet for users to access.
+          </li>
+        </ol>
+      </section>
+
+      <section class="main-section" id="installation">
+        <header><h2>Installation</h2></header>
+        <p>
+          To start using React in your project, you need to install it. You can
+          install React via npm (Node Package Manager) or yarn.
+        </p>
+        <pre>
+          <code>
+            # Using npm
+            npm install react react-dom
+
+            # Using yarn
+            yarn add react react-dom
+          </code>
+        </pre>
+      </section>
+
+      <section class="main-section" id="hello_world_example">
+        <header><h1>Hello World Example</h1></header>
+        <p>
+          To get you started, here's a simple "Hello World" example of a React
+          component.
+        </p>
+        <pre>
+          <code>
+            import React from 'react';
+
+            function HelloWorld() {
+            &nbsp;return &lt;h1&gt;Hello, World!&lt;/h1&gt;;
+            }
+
+            export default HelloWorld;
+          </code>
+        </pre>
+      </section>
+
+      <section class="main-section" id="components">
+        <header><h2>Components</h2></header>
+        <p>
+          In React, applications are typically built by composing reusable
+          components. Components can be functional or class-based, and they
+          encapsulate a specific piece of functionality or user interface.
+        </p>
+        <h3>Functional Components</h3>
+        <p>
+          Functional components are JavaScript funtions that return JSX
+          elements. They are simple and used for rendering UI elements.
+        </p>
+        <pre>
+          <code>
+            function MyComponent(props) {
+            &nbsp;return &lt;div&gt;{props.text}&lt;/div&gt;
+            }
+          </code>
+        </pre>
+        <h3>Class Components</h3>
+        <p>
+          Class components are ES6 classes that extend the
+          <strong>`React.Component`</strong> classs. They have a
+          <strong>`render`</strong> method that returns JSX.
+        </p>
+        <pre>
+          <code>
+            class MyComponent extends React.Component {
+            &nbsp;render() {
+            &nbsp;&nbsp;return &lt;div&gt;{this.props.text}&lt;/div&gt;;
+            &nbsp;}
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section class="main-section" id="props">
+        <header><h2>Props</h2></header>
+        <p>
+          Props are a way to passs data into a component. They are read-only,
+          and the component recieving them cannot modify the props. Props are
+          used to configure and customize a component.
+        </p>
+        <pre>
+          <code>
+            function Greeting(props) {
+            &nbsp;return &lt;h1&gt;Hello, (props.name)!&lt;/h1&gt;;
+            }
+
+            // Usage
+            &lt;Greeting name="John" /&gt;
+          </code>
+        </pre>
+        <pre>
+          <code>
+            import PropTypes from 'prop-types';
+
+            function Greeting(props) {
+            &nbsp;return &lt;h1&gt;Hello, {props.name}!&lt;/h1&gt;;
+            }
+
+            Greeting.propTypes = {
+            &nbsp;name: PropTypes.string.isRequired,
+            };
+          </code>
+        </pre>
+      </section>
+
+      <section class="main-section" id="state">
+        <header><h2>State</h2></header>
+        <p>
+          State is used to store and manage data within a component. When state
+          changes, the component re-renders o reflect the updated data.
+        </p>
+        <pre>
+          <code>
+            class Counter extends React.Component {
+            &nbsp;constructor(props) {
+            &nbsp;&nbsp;super(props);
+            &nbsp;&nbsp;this.state = {count: 0};
+            }
+
+            &nbsp;render() {
+            &nbsp;&nbsp;return {
+            &nbsp;&nbsp;&nbsp;&lt;div&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Count: {this.state.count}&lt;/p&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;button onClick={() => this.setState({ count: this.state.count + 1 })}&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Increment
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
+            &nbsp;&nbsp;&nbsp;&lt;/div&gt;
+            &nbsp;&nbsp;}
+            &nbsp;}
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section class="main-section" id="lifecycle_methods">
+        <header><h1>Lifecycle Methods</h1></header>
+        <p>
+          React components have various lifecycle methods that allow you to
+          perform actions at specific points during a component's existence.
+          Some common lifecycle methods include
+          <strong>`componentDidMount`</strong>,
+          <strong>`compoundDidUpdate`</strong>, and
+          <strong>`compoundWillUnmount`</strong>.
+        </p>
+      </section>
+
+      <section class="main-section" id="conditional_rendering">
+        <header><h2>Conditional Rendering</h2></header>
+        <p>
+          You can conditionally render elements based on certain conditions
+          using JavaScript expressions.
+        </p>
+        <pre>
+          <code>
+            function Greeting(props) {
+              &nbsp;if (props.isLoggedIn) {
+              &nbsp;&nbsp;return &lt;h1&gt;Welcome back!&lt;/h1&gt;;
+              } else {
+              &nbsp;&nbsp;return &lt;h1&gt;Please sign up or log in.&lt;/h1&gt;;
+            &nbsp;&nbsp;}
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section class="main-section" id="lists_and_keys">
+        <header><h2>Lists and Keys</h2></header>
+        <p>
+          React allow you to render lists of elements and assign unique kes to
+          each element in the list to improve performance and maintain component
+          state.
+        </p>
+        <pre>
+          <code>
+            function TodoList(props) {
+            &nbsp;const todos = props.todos;
+            &nbsp;const todoItems = todos.map((todo) => &lt;li key={todo.id}&gt;{todo.text}&lt;
+            /li&gt;);
+            &nbsp;return &lt;ul&gt;{todoItems}&lt;/ul&gt;;
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section class="main-section" id="event_handling">
+        <header><h2>Event Handling</h2></header>
+        <p>
+          React allows you to define event handlers to respond to user
+          interactions, such as cliks, form submissions, or keyboard input.
+        </p>
+        <pre>
+          <code>
+            class Button extends React.Component {
+            &nbsp;handleClick() {
+            &nbsp;&nbsp;alert('Button clicked!');
+            &nbsp;}
+
+            &nbsp;render() {
+            &nbsp;&nbsp;return &lt;button onClick={this.handleClick}&gt;Click Me&lt;/button&gt;;
+            &nbsp;}
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section class="main-section" id="forms">
+        <header><h2>Forms</h2></header>
+        <p>
+          React provides a conveninet way to handle form inputs and manage their
+          state.
+        </p>
+        <pre>
+          <code>
+            class MyForm extends React.Component {
+            &nbsp;constructor(props) {
+            &nbsp;&nbsp;super(props);
+            &nbsp;&nbsp;this.state = { inputValue: '' };
+            &nbsp;}
+
+            &nbsp;handleChange(event) {
+            &nbsp;&nbsp;this.setState({ inputValue: event.target.value });
+            &nbsp;}
+
+            &nbsp;render() {
+            &nbsp;&nbsp;return (
+            &nbsp;&nbsp;&nbsp;&lt;form&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;input type="text" value={this.state.inputValue} onChange={(e) => this.handleChange(e)} /&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;You typed: {this.state.inputValue}&lt;/p&gt;
+            &nbsp;&nbsp;&nbsp;&lt;/form&gt;
+            &nbsp;&nbsp;);
+            &nbsp;}
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section class="main-section" id="conditional_rendering_2">
+        <header><h2>Conditional Rendering 2</h2></header>
+        <p>
+          You can conditionally render components based on certain conditions.
+          This can be achieved using JavaScript's conditional operators or
+          conditional rendering functions.
+        </p>
+        <pre>
+          <code>
+            function ConditionalComponent(props) {
+            &nbsp;if (props.condition) {
+            &nbsp;&nbsp;return &lt;div&gt;This is rendered when the condition is true.&lt;/div&gt;;
+            &nbsp;} else {
+            &nbsp;&nbsp;return &lt;div&gt;This is rendered when the condition is false.&lt;/div&gt;;
+            &nbsp;}
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section class="main-section" id="styling">
+        <header><h2>Styling</h2></header>
+        <p>
+          Styling in React can be achieved in various ways, including using CSS
+          classes, inline styles or CSS-in-JS libraries like styled-components.
+        </p>
+      </section>
+
+      <section class="main-section" id="router">
+        <header><h2>Router</h2></header>
+        <p>
+          For building single-page applications, React Router is commonly used
+          to manage and navigate between different views or page within an
+          application.
+        </p>
+        <pre>
+          <code>
+            import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+            function App() {
+            &nbsp;return (
+            &nbsp;&nbsp;&lt;Router&gt;
+            &nbsp;&nbsp;&nbsp;&lt;Switch&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;Route exact path="/" component={Home} /&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;Route path="/about" component={About} /&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;Route path="/contact" component={Contact} /&gt;
+            &nbsp;&nbsp;&nbsp;&lt;/Switch&gt;
+            &nbsp;&nbsp;&lt;/Router&gt;
+            &nbsp;);
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section class="main-section" id="hooks">
+        <header><h2>Hooks</h2></header>
+        <p>
+          Introduced in React 16.8, hooks allow yo to use state and ither React
+          features in functional components. Commonly used hooks include
+          <strong>`useState`</strong>, <strong>`useEffect`</strong>, and
+          <strong>`useContext`</strong>.
+        </p>
+        <pre>
+          <code>
+            import React, { useState, useEffect } from 'react';
+
+            function Counter() {
+            &nbsp;const [count, setCount] = useState(0);
+
+            &nbsp;useEffect(() => {
+            &nbsp;&nbsp;document.title = `Count: ${count}`;
+            &nbsp;}, [count]);
+
+            &nbsp;return (
+            &nbsp;&nbsp;&lt;div&gt;
+            &nbsp;&nbsp;&nbsp;&lt;p&gt;Count: {count}&lt;/p&gt;
+            &nbsp;&nbsp;&nbsp;&lt;button onClick={() = > setCount(count + 1)}&gt;Increment&lt;/button&gt;
+            &nbsp;&nbsp;&lt;/div&gt;
+            &nbsp;);
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section class="main-section" id="context">
+        <header><h2>Context</h2></header>
+        <p>
+          React Context allows data to be passed throgh the component tree
+          without having to pass props manually at every level. it's often used
+          for global state management.
+        </p>
+        <pre>
+          <code>
+            const MyContext = React.createContext();
+
+            function App() {
+            &nbsp;return (
+            &nbsp;&nbsp;&lt;MyContext.Provider value="Hello from Context!"&gt;
+            &nbsp;&nbsp;&nbsp;&lt;MyComponent /&gt;
+            &nbsp;&nbsp;&lt;/MyContext.Provider&gt;
+            &nbsp;);
+            }
+
+            function MyComponent() {
+            &nbsp;const value = React.useContext(MyContext);
+            &nbsp;return &lt;p&gt;{value}&lt;/p&gt;;
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section class="main-section" id="redux">
+        <header><h2>Redux</h2></header>
+        <p>
+          For more complex state management, Redux is a popular library that
+          helps manage the state of an application in a predictable way.
+        </p>
+      </section>
+
+      <section class="main-section" id="testing">
+        <header><h2>Testing</h2></header>
+        <p>
+          React application can be tested using various testing libraries and
+          frameworks , such as Jest and Enzyme.
+        </p>
+      </section>
+
+      <section class="main-section" id="deployment">
+        <header><h2>Deployment</h2></header>
+        <p>
+          Deploying a React application involves building and serving the
+          optimized production version. Popular options for deployment include
+          state site genrators, hosting platfors, and serverless solutions.
+        </p>
+      </section>
+
+      <footer id="footer">
+        <p>
+          This React dicumentation provides a comprehensives overview of ky
+          conceps, terms, and best practices for building applications with
+          React. Keep in mind that React is a dyna,ic and evolving technology,
+          so it's essential to stay updated with the latest documentation, best
+          practices, and community resources for building robust and efficient
+          React applications.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
