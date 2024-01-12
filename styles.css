@@ -9,6 +9,7 @@
 html,
 body {
   min-width: 290px;
+  font-size: 16px;
   color: #4d4e53;
   background-color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
@@ -87,7 +88,7 @@ section li {
 code {
   display: block;
   text-align: left;
-  font-size: 1.1em;
+  font-size: 1em;
   white-space: pre-line;
   position: relative;
   word-break: normal;
