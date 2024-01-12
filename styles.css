@@ -100,13 +100,6 @@ code {
   border-radius: 5px;
 }
 
-#footer {
-  margin-top: 50px;
-  background-color: #eaeaea;
-  text-align: center;
-  color: #8c949d;
-}
-
 @media only screen and (max-width: 815px) {
   header {
     font-size: 1.1em;
